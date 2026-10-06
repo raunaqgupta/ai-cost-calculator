@@ -60,13 +60,17 @@ It returns `201 {"url": "<UPLOAD_URL>/<owner>/<repo>/<date>-<uuid>.png"}`.
 
 ## 3. Put it in the issue or PR
 
-Write the URL as a Markdown image in the body or comment, with alt text that says what it shows:
+Put the URL in the body or comment as an HTML `<img>` tag, with alt text that says what it shows. A width of 640 to 800 keeps a full-page screenshot readable without filling the page:
 
-```markdown
-![The settings page after saving, with the error banner](<url from step 2>)
+```html
+<img src="<url from step 2>" alt="The settings page after saving, with the error banner" width="720">
 ```
 
+Don't use a Markdown image (`![alt](url)`): in cloud sessions the GitHub tools remove its `!`, so it shows as a link.
+
 Post it with the GitHub MCP tools as usual: `issue_write` or `update_pull_request` for a body, `add_issue_comment` for a comment, `create_pull_request` for a new PR.
+
+Then read the body or comment back and check the `<img>` tag is still there. Removing the `!` is likely a safeguard against images that leak data through their URLs, and the `<img>` tag may get the same treatment. If the tag is gone or changed, don't look for another way to embed the image: edit the text to a plain link, `[Screenshot: <what it shows>](<url>)`, and tell the user images can only be linked for now.
 
 ## Things to know
 

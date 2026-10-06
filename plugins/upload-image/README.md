@@ -12,7 +12,7 @@ It adds the `upload-image` skill, which tells Claude to:
 
 1. Take a screenshot with Playwright, or use an existing image.
 2. Upload it with `curl` to `$UPLOAD_URL?source=<owner>/<repo>`, using `$UPLOAD_KEY`.
-3. Put the returned URL in the issue, PR or comment as a Markdown image, through the GitHub MCP tools.
+3. Put the returned URL in the issue, PR or comment as an HTML `<img>` tag, through the GitHub MCP tools. A Markdown image (`![alt](url)`) loses its `!` when posted from a cloud session and shows as a link, so the skill avoids it, and falls back to a plain link if the tag is ever removed too.
 
 ## Requirements
 
