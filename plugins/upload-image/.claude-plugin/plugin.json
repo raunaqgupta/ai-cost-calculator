@@ -1,0 +1,10 @@
+{
+  "name": "upload-image",
+  "version": "1.0.0",
+  "description": "Puts screenshots and other images into GitHub issues and PRs from Claude cloud sessions, through an instance of the uploads service.",
+  "author": { "name": "Raunaq Gupta" },
+  "homepage": "https://github.com/raunaqgupta/ai-harness",
+  "repository": "https://github.com/raunaqgupta/ai-harness",
+  "license": "GPL-3.0",
+  "keywords": ["skills", "github", "screenshots", "images", "playwright"]
+}

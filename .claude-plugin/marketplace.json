@@ -16,6 +16,11 @@
       "name": "prompt-classifier",
       "source": "./plugins/prompt-classifier",
       "description": "Classifies every prompt as a question, an issue, or a PR via TypeSafe, and nudges the session toward the matching lane of the git-workflow pipeline."
+    },
+    {
+      "name": "upload-image",
+      "source": "./plugins/upload-image",
+      "description": "Puts screenshots and other images into GitHub issues and PRs from Claude cloud sessions, through an instance of the uploads service."
     }
   ]
 }
