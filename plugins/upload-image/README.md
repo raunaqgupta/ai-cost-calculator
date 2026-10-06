@@ -12,7 +12,7 @@ It adds the `upload-image` skill, which tells Claude to:
 
 1. Take a screenshot with Playwright, or use an existing image.
 2. Upload it with `curl` to `$UPLOAD_URL?source=<owner>/<repo>`, using `$UPLOAD_KEY`.
-3. Put the returned URL in the issue, PR or comment as a Markdown image, through the GitHub MCP tools.
+3. Put the returned URL in the issue or PR through the GitHub MCP tools. In cloud sessions the tools turn images into links in issue and PR bodies, so a body gets a plain link. In a comment, the skill posts a link and then edits the comment to make it an image, which currently survives, and checks the result.
 
 ## Requirements
 
